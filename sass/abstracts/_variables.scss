@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+//COLORS
+$primary_color: #264065;
+$secondary_color: #909090;
+$body-color: #070D15;
+$bg1-color: #FAF8F5;
+$bg2-color: #A9D6CB;
+
+
+//FONT FAMILIES
+$primary-font: "Poppins", sans-serif;
+$secondary-font: "Nunito Sans", sans-serif;
+
+//FONT STYLES
+$title-font-weight: 700;
+$subtitle-font-weight: 500;
+$body-font-weight: 400;
+$font-style: normal;
+
+
+//FONT-SIZE
+$small-size: 18px;
+$medium-size: 24px;
+$large-size: 36px;
+$extra-large-size: 64px;
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1600px !default;

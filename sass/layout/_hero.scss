@@ -1,0 +1,139 @@
+// HERO
+
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+section.hero {
+    position: relative;
+    z-index: 11;
+    margin-bottom: 90px;
+    .hero__content {
+        .hero__text {
+            max-width: 50%;
+            h1 {
+                color: v.$primary_color;
+                font-family: v.$primary-font;
+                font-weight: v.$title-font-weight;
+                font-style: v.$font-style;
+                font-size: v.$extra-large-size;
+                line-height: 80px;
+            }
+            p {
+                color: v.$secondary_color;
+                font-family: v.$primary-font;
+                font-weight: v.$body-font-weight;
+                font-style: v.$font-style;
+                font-size: v.$medium-size;
+                line-height: 40px;
+                padding-bottom: 56px;
+
+            }
+            .hero__cta {
+                position: relative;
+                display: flex;
+                gap: 32px;
+                align-items: center;
+                .left-button {
+                    a {
+                        @include mx.reset-a();
+                        display: inline-block;
+                        color: white;
+                        background-color: v.$primary_color;
+                        font-family: v.$primary-font;
+                        font-weight: v.$body-font-weight;
+                        font-style: v.$font-style;
+                        font-size: v.$small-size;
+                        padding: 16px 46px;
+                        border-radius: 50px;
+                        &:hover {
+                            background-color: v.$secondary_color;
+                            color: v.$primary_color;
+                        }
+                    }
+                }
+                .right-button {
+                    display: flex;
+                    align-items: center;
+                    z-index: 11;
+                    border-radius: 50px;
+                    img {
+                        padding: 6px;
+                        margin: 0;
+                    }
+                    
+                    a {
+                        @include mx.reset-a();
+                        display: inline-block;
+                        color: v.$primary_color;
+                        font-family: v.$primary-font;
+                        font-weight: v.$body-font-weight;
+                        font-style: v.$font-style;
+                        font-size: v.$small-size;
+                        padding: 16px 16px;
+                        
+
+                    }
+                    &:hover {
+                        background-color: v.$primary_color;
+                        a {
+                            color: white;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+    .dibujo {
+        position: absolute;
+        top: -80px;
+        right: 60px;
+        opacity: 10%;
+    }
+    figure {
+        margin: 0;
+        img {
+            width: 1400px;
+            position: absolute;
+            top: -150px;
+            right: -130px;
+        }
+        
+    }
+    .review {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 360px;
+        padding: 24px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 16px;
+        backdrop-filter: blur(5px);
+        img {
+            width: 32px;
+        }
+        p{
+            color: v.$primary_color;
+            font-family: v.$primary-font;
+            font-weight: v.$body-font-weight;
+            font-style: v.$font-style;
+            font-size: v.$small-size;
+            margin: 0;
+        }
+        p.customer {
+            font-weight: v.$title-font-weight;
+        }
+        
+    }
+    .r1 {
+        position: absolute;
+        right: -125px;
+        bottom: -40px;
+    }
+    .r2 {
+        position: absolute;
+        right: 40px;
+        bottom: -320px;
+    }
+}

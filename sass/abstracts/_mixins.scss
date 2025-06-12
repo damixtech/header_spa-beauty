@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+
+//Reset lists
+@mixin reset-nav-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-a {
+  text-decoration: none;
+  color: black;
+}

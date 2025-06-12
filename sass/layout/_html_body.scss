@@ -1,0 +1,14 @@
+//HTML Y BODY
+
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+body {
+    position: relative;
+    background-image: url('../../img/hero_bg1.jpg'), url('../../img/hero_bg2.jpg');
+    
+    background-position: top left, top right;
+    background-repeat: no-repeat, repeat-x;
+    order: -1;
+    z-index: 0;
+}

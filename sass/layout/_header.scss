@@ -1,0 +1,100 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+header {
+    margin-bottom: 80px;
+    position: relative;
+     //CORREGIR
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+        position: relative;
+        z-index: 20;
+        figure {
+            margin: 0;
+            img {
+                width: 212px;
+            }
+        }
+        ul {
+            @include mx.reset-nav-ul();
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            
+            a {
+                
+                @include mx.reset-a();
+                color: v.$primary_color;
+                font-family: v.$primary-font;
+                font-weight: v.$body-font-weight;
+                font-style: v.$font-style;
+                font-size: v.$small-size;
+                &:hover {
+                    color: v.$secondary_color;
+                }
+            }
+        
+            li:last-child a::after { //PENDIENTE REVISIÓN
+                content: url('../../img/icon_arrow_down.svg');
+                vertical-align: middle;
+                margin-left: 5px;
+            }
+        }
+        .nav__buttons {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            z-index: 10;
+            .icon__buttons {
+                display: flex;
+                gap: 32px;
+                
+            }
+
+            .login__buttons {
+                display: flex;
+                gap: 32px;
+                align-items: center;
+                a {
+                    &.empty {
+                        color: v.$primary_color;
+                        font-family: v.$secondary-font;
+                        font-weight: v.$body-font-weight;
+                        font-style: v.$font-style;
+                        font-size: v.$small-size;
+                        border-radius: 50px;
+                        padding: 10px 20px;
+                        &:hover {
+                            color: white;
+                            background-color: v.$primary_color;
+                        }
+                    }
+                    &.filled {
+                        @include mx.reset-a();
+                        background-color: v.$primary_color;
+                        color: white;
+                        padding: 16px 40px;
+                        border-radius: 50px;
+                        font-family: v.$primary-font;
+                        font-weight: v.$body-font-weight;
+                        font-style: v.$font-style;
+                        font-size: v.$small-size;
+                        &:hover {
+                            background-color: v.$secondary_color;
+                            color: v.$primary_color;
+                        }
+                    }
+                }
+                
+
+            }
+        }
+    }
+}

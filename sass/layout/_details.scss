@@ -1,0 +1,30 @@
+//DETAILS
+
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as mx;
+
+section.details {
+    display: flex;
+    gap: 70px;
+    padding: 32px;
+    width: 643px;
+    background-color: white;
+    border-radius: 16px;
+    article {
+        text-align: center;
+        h2 {
+            color: v.$primary_color;
+            font-family: v.$primary-font;
+            font-weight: v.$subtitle-font-weight;
+            font-style: v.$font-style;
+            font-size: v.$large-size;
+        }
+        p {
+            color: v.$secondary_color;
+            font-family: v.$primary-font;
+            font-weight: v.$body-font-weight;
+            font-style: v.$font-style;
+            font-size: v.$small-size;
+        }
+    }
+}
