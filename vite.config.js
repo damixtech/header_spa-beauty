@@ -1,5 +1,12 @@
 import { defineConfig } from "vite";
+import path from "path";
 
 export default defineConfig({
-  base: "./", // Usa rutas relativas en los enlaces generados en el HTML
+  base: "./", // Rutas relativas para GitHub Pages
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
 });
+

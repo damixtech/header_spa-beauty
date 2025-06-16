@@ -42,7 +42,7 @@ header {
             }
         
             li:last-child a::after { //PENDIENTE REVISIÓN
-                content: url('../../img/icon_arrow_down.svg');
+                content: url('@/assets//img/icon_arrow_down.svg');
                 vertical-align: middle;
                 margin-left: 5px;
             }
